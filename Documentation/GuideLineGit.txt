@@ -1,22 +1,30 @@
-<type>(<scope>): <description>
+	Syntax standards for commits
 
-Allowed <type>
+<type>(<scope>): <description> #start by lowercase
+
+Allowed <type>:
 	
-	feat (feature)
-	fix (bug fix)
-	docs (documentation)
-	style (formatting, missing semi colons, lindter)
-	refactor
-	test (when adding missing tests)
-	chore (maintain devops, librairy)
+	feat => feature 
+	fix => bug fix
+	doc => documentation
+	style => formatting, missing semi colons, lindter
+	refactor => improve code
+	test => when adding missing tests
+	chore => maintain devops, librairy
+	spike => researche
 
-Allowed <scope>
+Allowed <scope>:
 	
 	$class
 	$subject (diagramm, repository)
 
-<subject> text
+<subject> text: #start by lowercase
 
-use imperative, present tense: “change” not “changed” nor “changes”
-don't capitalize first letter
-no dot (.) at the end
+	- use imperative, present tense: ï¿½changeï¿½ not ï¿½changedï¿½ nor ï¿½changesï¿½
+	- don't capitalize first letter
+	- no dot (.) at the end
+
+
+	Syntax standards for branch
+
+<type>/<id_issue>/<description> #start by lowercase
