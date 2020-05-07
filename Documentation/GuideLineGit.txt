@@ -1,0 +1,22 @@
+<type>(<scope>): <description>
+
+Allowed <type>
+	
+	feat (feature)
+	fix (bug fix)
+	docs (documentation)
+	style (formatting, missing semi colons, lindter)
+	refactor
+	test (when adding missing tests)
+	chore (maintain devops, librairy)
+
+Allowed <scope>
+	
+	$class
+	$subject (diagramm, repository)
+
+<subject> text
+
+use imperative, present tense: “change” not “changed” nor “changes”
+don't capitalize first letter
+no dot (.) at the end
