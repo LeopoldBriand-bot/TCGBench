@@ -33,3 +33,10 @@
 
 #VisualStudio
 .vs
+
+#VScode
+.vscode
+
+
+#Build folder
+Build

@@ -1,7 +1,9 @@
-enum State {
-	None,
-	Stun,
-	Frozen,
-	Rage,
-	Burning
-};
+namespace State {
+	enum State {
+		None,
+		Stun,
+		Frozen,
+		Rage,
+		Burning
+	};
+}

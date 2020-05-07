@@ -23,8 +23,8 @@ class Unit
         Unit(std::string d_id, // First overload for classic units
             std::string d_name,
             std::string d_description, 
-            int d_damage, int d_life,, 
-            Category d_category, Range d_range, Type d_type,
+            int d_damage, int d_life,
+            Category::Category d_category, Range::Range d_range, Type::Type d_type,
             std::list<int> d_cost);
 
         Unit(std::string d_id, // Second overload for units with special effects
@@ -33,7 +33,7 @@ class Unit
             int d_damage, int d_life,
             std::list<Effect> d_effect,
             bool d_isUsable, bool d_hasBeenUsed,
-            Category d_category, Range d_range, State d_state, Type d_type,
+            Category::Category d_category, Range::Range d_range, State::State d_state, Type::Type d_type,
             std::list<int> d_cost);
 
         ~Unit();
@@ -50,10 +50,10 @@ class Unit
         std::list<Effect> getEffects();
         bool getIsUsable();
         bool getHasBeenUsed();
-        Category getCategory();
-        Range getRange();
-        State getState();
-        Type getType();
+        Category::Category getCategory();
+        Range::Range getRange();
+        State::State getState();
+        Type::Type getType();
         std::list<int> getCost();
 
         // ###################################################
@@ -68,9 +68,9 @@ class Unit
         void setEffects(std::list <Effect> newEffects);
         void setIsUsable(bool newIsUsable);
         void setHasBeenUsed(bool newHasBeenUsed);
-        void setCategory(Category newCategory);
-        void setRange(Range newRange);
-        void setType(Type newType);
+        void setCategory(Category::Category newCategory);
+        void setRange(Range::Range newRange);
+        void setType(Type::Type newType);
         void setCost(std::list<int> newCost);
 
 
@@ -91,10 +91,10 @@ class Unit
         int damage;
         int life;
         std::list<Effect> effects;
-        Category category;
-        Range range;
-        State state;
-        Type type;
+        Category::Category category;
+        Range::Range range;
+        State::State state;
+        Type::Type type;
         std::list<int> cost;
 
 };

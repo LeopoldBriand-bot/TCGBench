@@ -16,44 +16,44 @@ Unit::Unit(std::string d_id, std::string d_name, std::string d_description)
 	description = d_description;
 	damage = 0;
 	life = 0;
-	effects = [];
+	effects = {};
 	isUsable = false;
 	hasBeenUsed = false;
-	category = Category::undefined;
-	range = Range::undefined;
-	state = State::None;
-	type = Type::common;
-	cost = [0, 0];
+	category = Category::Category::undefined;
+	range = Range::Range::undefined;
+	state = State::State::None;
+	type = Type::Type::common;
+	cost = {0, 0};
 
 	
 
 }
 
-Unit::Unit(std::string d_id, std::string d_name, std::string d_description, int d_damage, int d_life, , Category d_category, Range d_range, Type d_type, std::list<int> d_cost)
+Unit::Unit(std::string d_id, std::string d_name, std::string d_description, int d_damage, int d_life, Category::Category d_category, Range::Range d_range, Type::Type  d_type, std::list<int> d_cost)
 {
 	id = d_id;
 	name = d_name;
 	description = d_description;
 	damage = d_damage;
 	life = d_life;
-	effects = [];
+	effects = {};
 	isUsable = false;
 	hasBeenUsed = false;
 	category = d_category;
 	range = d_range;
-	state = State::None;
+	state = State::State::None;
 	type = d_type;
 	cost = d_cost;
 }
 
-Unit::Unit(std::string d_id, std::string d_name, std::string d_description, int d_damage, int d_life, std::list<Effect> d_effect, bool d_isUsable, bool d_hasBeenUsed, Category d_category, Range d_range, State d_state, Type d_type, std::list<int> d_cost)
+Unit::Unit(std::string d_id, std::string d_name, std::string d_description, int d_damage, int d_life, std::list<Effect> d_effect, bool d_isUsable, bool d_hasBeenUsed, Category::Category d_category, Range::Range d_range, State::State d_state, Type::Type  d_type, std::list<int> d_cost)
 {
 	id = d_id;
 	name = d_name;
 	description = d_description;
 	damage = d_damage;
 	life = d_life;
-	effects = [];
+	effects = {};
 	isUsable = d_isUsable;
 	hasBeenUsed = d_hasBeenUsed;
 	category = d_category;
@@ -115,22 +115,22 @@ bool Unit::getHasBeenUsed()
 	return hasBeenUsed;
 }
 
-Category Unit::getCategory()
+Category::Category Unit::getCategory()
 {
 	return category;
 }
 
-Range Unit::getRange()
+Range::Range Unit::getRange()
 {
 	return range;
 }
 
-State Unit::getState()
+State::State Unit::getState()
 {
 	return state;
 }
 
-Type Unit::getType()
+Type::Type  Unit::getType()
 {
 	return type;
 }
@@ -184,17 +184,17 @@ void Unit::setHasBeenUsed(bool newHasBeenUsed)
 	hasBeenUsed = newHasBeenUsed;
 }
 
-void Unit::setCategory(Category newCategory)
+void Unit::setCategory(Category::Category newCategory)
 {
 	category = newCategory;
 }
 
-void Unit::setRange(Range newRange)
+void Unit::setRange(Range::Range newRange)
 {
 	range = newRange;
 }
 
-void Unit::setType(Type newType)
+void Unit::setType(Type::Type  newType)
 {
 	type = newType;
 }
@@ -220,5 +220,5 @@ void Unit::attackUnits(std::list<Unit> targets, int damage)
 
 void Unit::sufferDamage(int damage)
 {
-	setLife(getLife - damage);
+	setLife(getLife() - damage);
 }
