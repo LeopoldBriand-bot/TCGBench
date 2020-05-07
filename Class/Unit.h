@@ -11,7 +11,6 @@
 class Unit
 {
     public:
-
         // ###################################################
         // Declarations
         // ###################################################
@@ -72,8 +71,6 @@ class Unit
         void setRange(Range::Range newRange);
         void setType(Type::Type newType);
         void setCost(std::list<int> newCost);
-
-
 
         // ###################################################
         // Methods

@@ -9,7 +9,7 @@ using namespace std;
 // Declarations
 // ###################################################
 
-Unit::Unit(std::string d_id, std::string d_name, std::string d_description)
+Unit::Unit(string d_id, string d_name, string d_description)
 {
 	id = d_id;
 	name = d_name;
@@ -24,12 +24,9 @@ Unit::Unit(std::string d_id, std::string d_name, std::string d_description)
 	state = State::State::None;
 	type = Type::Type::common;
 	cost = {0, 0};
-
-	
-
 }
 
-Unit::Unit(std::string d_id, std::string d_name, std::string d_description, int d_damage, int d_life, Category::Category d_category, Range::Range d_range, Type::Type  d_type, std::list<int> d_cost)
+Unit::Unit(string d_id, string d_name, string d_description, int d_damage, int d_life, Category::Category d_category, Range::Range d_range, Type::Type  d_type, list<int> d_cost)
 {
 	id = d_id;
 	name = d_name;
@@ -46,7 +43,7 @@ Unit::Unit(std::string d_id, std::string d_name, std::string d_description, int 
 	cost = d_cost;
 }
 
-Unit::Unit(std::string d_id, std::string d_name, std::string d_description, int d_damage, int d_life, std::list<Effect> d_effect, bool d_isUsable, bool d_hasBeenUsed, Category::Category d_category, Range::Range d_range, State::State d_state, Type::Type  d_type, std::list<int> d_cost)
+Unit::Unit(string d_id, string d_name, string d_description, int d_damage, int d_life, list<Effect> d_effect, bool d_isUsable, bool d_hasBeenUsed, Category::Category d_category, Range::Range d_range, State::State d_state, Type::Type  d_type, list<int> d_cost)
 {
 	id = d_id;
 	name = d_name;
@@ -73,19 +70,17 @@ Unit::~Unit()
 // Getters
 // ###################################################
 
-
-
-std::string Unit::getId()
+string Unit::getId()
 {
 	return id;
 }
 
-std::string Unit::getName()
+string Unit::getName()
 {
 	return name;
 }
 
-std::string Unit::getDescription()
+string Unit::getDescription()
 {
 	return description;
 }
@@ -100,7 +95,7 @@ int Unit::getLife()
 	return life;
 }
 
-std::list<Effect> Unit::getEffects()
+list<Effect> Unit::getEffects()
 {
 	return effects;
 }
@@ -135,7 +130,7 @@ Type::Type  Unit::getType()
 	return type;
 }
 
-std::list<int> Unit::getCost()
+list<int> Unit::getCost()
 {
 	return cost;
 }
@@ -144,17 +139,17 @@ std::list<int> Unit::getCost()
 // Setters
 // ###################################################
 
-void Unit::setId(std::string newId)
+void Unit::setId(string newId)
 {
 	id = newId;
 }
 
-void Unit::setName(std::string newName)
+void Unit::setName(string newName)
 {
 	name = newName;
 }
 
-void Unit::setDescription(std::string newDescription)
+void Unit::setDescription(string newDescription)
 {
 	description = newDescription;
 }
@@ -169,7 +164,7 @@ void Unit::setLife(int newLife)
 	life = newLife;
 }
 
-void Unit::setEffects(std::list<Effect> newEffects)
+void Unit::setEffects(list<Effect> newEffects)
 {
 	effects = newEffects;
 }
@@ -199,7 +194,7 @@ void Unit::setType(Type::Type  newType)
 	type = newType;
 }
 
-void Unit::setCost(std::list<int> newCost)
+void Unit::setCost(list<int> newCost)
 {
 	cost = newCost;
 }
@@ -210,7 +205,7 @@ void Unit::setCost(std::list<int> newCost)
 // ###################################################
 
 
-void Unit::attackUnits(std::list<Unit> targets, int damage)
+void Unit::attackUnits(list<Unit> targets, int damage)
 {
 	for each (Unit target in targets)
 	{

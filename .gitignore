@@ -36,6 +36,7 @@
 
 #VScode
 .vscode
+CMakeSettings.json
 
 
 #Build folder
