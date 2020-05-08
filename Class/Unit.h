@@ -15,7 +15,7 @@ class Unit
         // Declarations
         // ###################################################
 
-        Unit(std::string d_id,  // Empty constructor (Will create an Empty Unit)
+        Unit(std::string d_id,  // Constructor (Will create an Empty Unit)
             std::string d_name,
             std::string d_description);
 
