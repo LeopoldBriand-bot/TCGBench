@@ -16,6 +16,9 @@ class Player
         // Declarations
         // ###################################################
 
+        Player();
+        ~Player();
+
         // ###################################################
         // Getters
         // ###################################################
@@ -35,12 +38,22 @@ class Player
         // ###################################################
 
         void setId(std::string newId);
+        void setName(std::string newName);
+        void setDeck(std::list<Spell> newDeck);
+        void setHand(std::list<Spell> newHand);
+        void setBuildings(std::list<Building> newBuildings);
+        void setUniLocations(std::list<UnitLocation> newUnitLocations);
+        void setGraveYard(std::list<Unit> newGraveyard);
+        void setCommonRessources(int commonRessource);
+        void setRareRessources(int rareRessources);
 
         // ###################################################
         // Methods
         // ###################################################
 
         void playTurn();
+        void addUnitOnBoard(UnitLocation newUnitLocation);
+        void sendUnitToGraveyard(UnitLocation &unitLocation);
 
     private:
          std::string id;
