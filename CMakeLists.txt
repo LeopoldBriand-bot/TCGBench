@@ -25,7 +25,7 @@ target_include_directories(Catch
 #
 add_executable(unit_tests
 	test/main.cpp
-)
+	 "Class/UnitLocation.cpp")
 target_include_directories(unit_tests
 	PUBLIC
 		test/
@@ -54,4 +54,4 @@ install(
 
 set(SOURCE main.cpp)
 
-add_executable(${PROJECT_NAME} ${SOURCE})
+add_executable(${PROJECT_NAME} ${SOURCE} "Class/UnitLocation.cpp")

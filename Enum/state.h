@@ -1,5 +1,5 @@
 namespace State {
-	enum State {
+	enum class State {
 		None,
 		Stun,
 		Frozen,

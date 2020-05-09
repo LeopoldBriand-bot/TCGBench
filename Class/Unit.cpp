@@ -1,4 +1,5 @@
 #include "Unit.h"
+#include "Unit.h"
 #include "../Enum/category.h"
 #include "../Enum/range.h"
 #include "../Enum/state.h"
@@ -8,6 +9,10 @@ using namespace std;
 // ###################################################
 // Declarations
 // ###################################################
+
+Unit::Unit()
+{
+}
 
 Unit::Unit(string d_id, string d_name, string d_description)
 {

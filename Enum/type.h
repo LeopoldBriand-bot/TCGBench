@@ -1,5 +1,5 @@
 namespace Type {
-	enum Type {
+	enum class Type {
 		common = 0,
 		minor = 1,
 		major = 2,
