@@ -5,6 +5,7 @@
 #include <list>
 #include "Spell.h"
 #include "Building.h"
+#include "BuildingLocation.h"
 #include "Unit.h"
 #include "UnitLocation.h"
 
@@ -27,7 +28,7 @@ class Player
         std::string getName();
         std::list<Spell> getDeck();
         std::list<Spell> getHand();
-        std::list<Building> getBuildings();
+        std::list<BuildingLocation> getBuildingLocations();
         std::list<UnitLocation> getUnitLocations();
         std::list<Unit> getGraveyard();
         int getCommonRessources();
@@ -41,7 +42,7 @@ class Player
         void setName(std::string newName);
         void setDeck(std::list<Spell> newDeck);
         void setHand(std::list<Spell> newHand);
-        void setBuildings(std::list<Building> newBuildings);
+        void setBuildingLocations(std::list<BuildingLocation> newBuildingLocations);
         void setUniLocations(std::list<UnitLocation> newUnitLocations);
         void setGraveYard(std::list<Unit> newGraveyard);
         void setCommonRessources(int commonRessource);
@@ -54,13 +55,14 @@ class Player
         void playTurn();
         void addUnitOnBoard(UnitLocation newUnitLocation);
         void sendUnitToGraveyard(UnitLocation &unitLocation);
+        std::list<int> getTargetLocation();
 
     private:
          std::string id;
          std::string name;
          std::list<Spell> deck;
          std::list<Spell> hand;
-         std::list<Building> buildings;
+         std::list<BuildingLocation> buildingLocations;
          std::list<UnitLocation> unitLocations;
          std::list<Unit> graveyard;
          std::list<int> ressources;

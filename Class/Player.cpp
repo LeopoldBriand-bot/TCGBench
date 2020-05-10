@@ -38,9 +38,9 @@ std::list<Spell> Player::getHand()
 	return hand;
 }
 
-std::list<Building> Player::getBuildings()
+std::list<BuildingLocation> Player::getBuildingLocations()
 {
-	return buildings;
+	return buildingLocations;
 }
 
 std::list<UnitLocation> Player::getUnitLocations()
@@ -87,9 +87,9 @@ void Player::setHand(std::list<Spell> newHand)
 	hand = newHand;
 }
 
-void Player::setBuildings(std::list<Building> newBuildings)
+void Player::setBuildingLocations(std::list<BuildingLocation> newBuildingLocations)
 {
-	buildings = newBuildings;
+	buildingLocations = newBuildingLocations;
 }
 
 void Player::setUniLocations(std::list<UnitLocation> newUnitLocations)
@@ -125,8 +125,13 @@ void Player::addUnitOnBoard(UnitLocation newUnitLocation)
 {
 }
 
-void Player::sendUnitToGraveyard(UnitLocation unitLocation)
+void Player::sendUnitToGraveyard(UnitLocation &unitLocation)
 {
 	graveyard.push_back(unitLocation.getUnit());
 	//TODO: delete it from unitLocations list
+}
+
+std::list<int> Player::getTargetLocation()
+{
+	return { 0,0 }; // Add Here the function that select placement on board
 }
