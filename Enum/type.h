@@ -1,3 +1,6 @@
+#ifndef DEF_TYPE
+#define DEF_TYPE
+
 namespace Type {
 	enum class Type {
 		common = 0,
@@ -7,3 +10,5 @@ namespace Type {
 		legendary = 4
 	};
 }
+
+#endif

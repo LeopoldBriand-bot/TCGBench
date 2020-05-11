@@ -1,3 +1,4 @@
+#pragma once
 #ifndef DEF_BUILDING
 #define DEF_BUILDING
 
@@ -7,7 +8,7 @@
 #include "Unit.h"
 #include "../Enum/state.h"
 #include "UnitLocation.h"
-#include "Player.h"
+class Player;
 
 class Building
 {

@@ -1,3 +1,5 @@
+#ifndef DEF_RANGE
+#define DEF_RANGE
 namespace Range {
 	enum class Range {
 		undefined = 0,
@@ -5,3 +7,5 @@ namespace Range {
 		rangedAttack = 2
 	};
 }
+
+#endif

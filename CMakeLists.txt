@@ -24,8 +24,7 @@ target_include_directories(Catch
 # Create a target for executing the Catch unit tests.
 #
 add_executable(unit_tests
-	test/main.cpp
-	 "Class/UnitLocation.cpp" "Class/BuildingLocation.cpp" "Class/Building.cpp")
+	"test/main.cpp" "Class/UnitLocation.cpp" "Class/BuildingLocation.cpp" "Class/Building.cpp" "Class/Effect.cpp" "Class/Player.cpp" "Class/Unit.cpp" "Class/Spell.cpp" "Class/Game.cpp")
 target_include_directories(unit_tests
 	PUBLIC
 		test/
@@ -54,4 +53,4 @@ install(
 
 set(SOURCE main.cpp)
 
-add_executable(${PROJECT_NAME} ${SOURCE} "Class/UnitLocation.cpp" "Class/BuildingLocation.cpp" "Class/Building.cpp")
+add_executable(${PROJECT_NAME} ${SOURCE} "Class/UnitLocation.cpp" "Class/BuildingLocation.cpp" "Class/Building.cpp" "Class/Effect.cpp" "Class/Player.cpp" "Class/Unit.cpp" "Class/Spell.cpp" "Class/Game.cpp")

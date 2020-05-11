@@ -1,3 +1,5 @@
+#ifndef DEF_CATEGORY
+#define DEF_CATEGORY
 namespace Category {
 	enum class Category {
 		undefined = 0,
@@ -5,3 +7,4 @@ namespace Category {
 		heavy = 2
 	};
 }
+#endif

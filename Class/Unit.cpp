@@ -218,7 +218,7 @@ void Unit::attackUnits(list<Unit> targets, int damage)
 	}
 }
 
-void Unit::sufferDamage(int damage)
+void Unit::sufferDamage(int dealedDamage)
 {
-	setLife(getLife() - damage);
+	setLife(getLife() - dealedDamage);
 }

@@ -78,7 +78,7 @@ class Unit
         // ###################################################
 
         void attackUnits(std::list<Unit> targets, int damage);
-        void sufferDamage(int damage);
+        void sufferDamage(int dealedDamage);
 
     private:
         bool isUsable;

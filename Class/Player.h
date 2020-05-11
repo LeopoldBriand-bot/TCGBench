@@ -1,3 +1,4 @@
+#pragma once
 #ifndef DEF_PLAYER
 #define DEF_PLAYER
 
